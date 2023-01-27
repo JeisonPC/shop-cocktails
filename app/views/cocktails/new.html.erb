@@ -1,0 +1,13 @@
+<h1>New cocktail</h1>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :ingredients %>
+  <%= f.input :recipe %>
+  <%= f.input :category, collection: [ "Cerveza", "Vino", "espumantes", "cocktail"]%>
+  <%= f.input :price %>
+  <%= f.submit %>
+<% end %>
+<br>
+<div>
+  <%= link_to "Back to cocktails", cocktails_path %>
+</div>
