@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-  resources :cocktails
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  root "cocktails#index"
-  resources :cocktails, except: :index
+
+  root to: "cocktails#index"
+  resources :cocktails, only: %i[index show new edit update create destroy] do
+    resources :bookings, only: %i[new create]
+  end
 end

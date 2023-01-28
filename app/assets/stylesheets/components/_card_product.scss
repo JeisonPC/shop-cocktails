@@ -1,0 +1,28 @@
+.card_product {
+  background-color: white;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  border-radius: 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card_product img {
+  width: 48%;
+  height: 48%;
+  margin: 0 !important;
+  overflow: hidden;
+  border-radius: 40px 40px 0 0;
+}
+
+.card_product > * {
+  margin: 1rem;
+}
+
+.cropped-photo {
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover;
+  object-position: 50% 50%;
+  }
