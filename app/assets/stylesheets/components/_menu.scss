@@ -1,0 +1,12 @@
+#menu {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  #menu {
+    border-right: 1px #212121 solid;
+    background-color: white;
+    display: grid;
+    grid-column-end: span 3;
+  }
+}
