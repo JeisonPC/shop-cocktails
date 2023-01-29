@@ -7,7 +7,7 @@ body {
 }
 
 .container-grid a {
-  background-color: #E63946;
+  background-color: #6A2C70;
   padding: 1rem 2rem;
   border-radius: 40px;
   text-decoration: none;
@@ -18,17 +18,28 @@ body {
 #cocktails {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .container-grid {
   display: grid;
   grid-auto-rows: minmax(125px, auto);
   grid-gap: .5rem;
-  margin: 8rem 1rem;
+  margin: 4.5rem 1rem;
 }
 
 .logo {
   width: 10rem;
+}
+
+.footer {
+  background-color: white;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
 }
 
 @media screen and (min-width: 576px) {

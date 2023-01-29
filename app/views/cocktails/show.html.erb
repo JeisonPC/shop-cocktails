@@ -1,6 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @cocktail %>
+<div id="cocktail" class="card_product">
+  <%= image_tag(@cocktail.photo, class: "cropped-photo")   %>
+  <h3><%= @cocktail.name %></h3  >
+  <%= @cocktail.category %>
+  <%= @cocktail.recipe %>
+  <%= @cocktail.ingredients %>
+  <%= @cocktail.price %>
+</div>
+
 
 <div>
   <%= link_to "Edit this cocktail", edit_cocktail_path(@cocktail) %> |
