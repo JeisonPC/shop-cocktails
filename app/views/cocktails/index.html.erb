@@ -1,11 +1,6 @@
 <div class="container-grid text-center">
   <%= render "shared/slider" %>
-  <div>
-    <div id="menu">
-    <%= image_tag("ShopTail-logox2.png", alt: "logo", class: "logo") %>
-    <h2>Vinos</h2>
-    <h2>Cervezas</h2>
-  </div>
+  <%= render "shared/menu" %>
   <div class="products">
     <h1>Cocktails</h1>
     <div id="cocktails">
@@ -14,7 +9,6 @@
       <% end %>
     </div>
   </div>
-  </div>
-
+</div>
 </div>
 <%= link_to "New cocktail", new_cocktail_path %>

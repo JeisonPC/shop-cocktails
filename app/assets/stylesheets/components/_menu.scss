@@ -4,9 +4,25 @@
 
 @media screen and (min-width: 576px) {
   #menu {
-    border-right: 1px #212121 solid;
     background-color: white;
     display: grid;
     grid-column-end: span 3;
+    border-radius: 40px;
+    max-height: 600px;
+    padding: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  #menu > * {
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 40px;
+  }
+
+  #menu > button:hover {
+    background-color: #E63946;
+    color: white;
   }
 }
