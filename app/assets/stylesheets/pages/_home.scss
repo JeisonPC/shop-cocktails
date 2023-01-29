@@ -1,8 +1,8 @@
 body {
-  background-color: #F1FAEE;
+  background-color: #FFFDED;
 }
 
-a {
+container-grid a {
   background-color: #E63946;
   padding: 1rem 2rem;
   border-radius: 40px;
@@ -11,6 +11,19 @@ a {
   text-align: center;
 }
 
+#menu {
+  display: grid;
+  grid-column-end: span 3;
+}
+
 #cocktails {
-  display: flex;
+  display: grid;
+  flex-wrap: wrap;
+  grid-column-end: span 9;
+}
+
+.container-grid {
+  display: grid;
+  grid-auto-rows: minmax(125px, auto);
+  grid-gap: .5rem;
 }
