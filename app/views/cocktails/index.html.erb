@@ -1,6 +1,6 @@
 <div class="container-grid text-center">
-  <%= render "shared/slider" %>
-  <%= render "shared/menu" %>
+  <%= render partial:"shared/slider" %>
+  <%= render partial: "shared/menu", locals: {categories: @categories} %>
   <div class="products">
     <h1>Cocktails</h1>
     <div id="cocktails">
@@ -9,6 +9,5 @@
       <% end %>
     </div>
   </div>
-</div>
 </div>
 <%= link_to "New cocktail", new_cocktail_path %>

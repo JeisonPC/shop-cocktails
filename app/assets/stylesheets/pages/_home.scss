@@ -41,13 +41,19 @@ body {
   position: relative;
   bottom: 0;
 }
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
 
 @media screen and (min-width: 576px) {
   .container-grid {
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 2rem;
-    width: 100%;
-    max-width: 70rem;
     grid-gap: 2rem;
     margin: 6rem 2rem;
     box-sizing: border-box;
@@ -56,4 +62,9 @@ body {
   #cocktails {
     grid-column-end: span 3;
   }
+
+  .products {
+    grid-column-end: span 9;
+  }
+
 }

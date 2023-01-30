@@ -1,8 +1,21 @@
-<h1><%= @category.name %></h1>
+<div class="container-grid text-center">
+</div>
 
-<h2>Cocktails</h2>
-<ul>
-  <% @category.cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
+<div class="container-grid text-center">
+  <%= render partial: "shared/menu", locals: {categories: @categories} %>
+  <div class="products">
+    <h1><%= @category.name %></h1>
+    <div id="cocktails">
+      <% @category.cocktails.each do |cocktail| %>
+        <div id="<%= dom_id cocktail %>" class="card_product">
+          <%= image_tag(cocktail.photo, class: "cropped-photo")   %>
+          <h3><%= cocktail.name %></h3  >
+          <%= cocktail.category.name %>
+          <%= cocktail.price %>
+          <%= link_to "Más Info", cocktail %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= link_to "New cocktail", new_cocktail_path %>
