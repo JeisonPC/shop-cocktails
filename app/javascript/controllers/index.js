@@ -12,3 +12,8 @@ application.register("navbar", NavbarController)
 
 import SliderController from "./slider_controller"
 application.register("slider", SliderController)
+
+import Carousel from 'stimulus-carousel'
+
+const application = Application.start()
+application.register('carousel', Carousel)
