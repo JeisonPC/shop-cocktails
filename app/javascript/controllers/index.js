@@ -7,8 +7,7 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import NavbarController from "./navbar_controller"
-application.register("navbar", NavbarController)
+const application = Application.start()
 
-import SliderController from "./slider_controller"
-application.register("slider", SliderController)
+import PriceController from "./price_controller"
+application.register("price", PriceController)

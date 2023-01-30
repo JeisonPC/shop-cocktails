@@ -4,6 +4,7 @@ class CocktailsController < ApplicationController
   # GET /cocktails
   def index
     @cocktails = Cocktail.all
+    @categories = Category.all
   end
 
   # GET /cocktails/1

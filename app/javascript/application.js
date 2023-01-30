@@ -2,5 +2,9 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "@popperjs/core"
+import "price_formatter"
+
 
 import "bootstrap"
+
+console.log("Hello from app/javascript/application.js")
