@@ -1,10 +1,11 @@
 .card_product {
   background-color: white;
-  margin: 2rem;
   display: flex;
   flex-direction: column;
   border-radius: 40px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  flex-basis: 33%;
+}
 
 .card_product img {
   width: 48%;
@@ -23,4 +24,4 @@
   height: 200px !important;
   object-fit: cover;
   object-position: 50% 50%;
-  }
+}

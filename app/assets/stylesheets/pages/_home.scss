@@ -2,7 +2,11 @@ body {
   background-color: #FFFDED;
 }
 
-container-grid a {
+.products {
+  grid-column-end: span 9;
+}
+
+.container-grid a {
   background-color: #E63946;
   padding: 1rem 2rem;
   border-radius: 40px;
@@ -11,19 +15,34 @@ container-grid a {
   text-align: center;
 }
 
-#menu {
-  display: grid;
-  grid-column-end: span 3;
-}
-
 #cocktails {
-  display: grid;
+  display: flex;
   flex-wrap: wrap;
-  grid-column-end: span 9;
 }
 
 .container-grid {
   display: grid;
   grid-auto-rows: minmax(125px, auto);
   grid-gap: .5rem;
+  margin: 8rem 1rem;
+}
+
+.logo {
+  width: 10rem;
+}
+
+@media screen and (min-width: 576px) {
+  .container-grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2rem;
+    width: 100%;
+    max-width: 70rem;
+    grid-gap: 2rem;
+    margin: 2rem;
+    box-sizing: border-box;
+  }
+
+  #cocktails {
+    grid-column-end: span 3;
+  }
 }
