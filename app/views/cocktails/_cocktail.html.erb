@@ -1,15 +1,7 @@
 <div id="<%= dom_id cocktail %>" class="card_product">
   <%= image_tag(cocktail.photo, class: "cropped-photo")   %>
-  <p>
-    <h3><%= cocktail.name %></h3  >
-  </p>
-  <p>
-    <strong>Category:</strong>
-    <%= cocktail.category %>
-  </p>
-  <p>
-    <strong>Price:</strong>
-    <%= cocktail.price %>
-  </p>
+  <h3><%= cocktail.name %></h3  >
+  <%= cocktail.category %>
+  <%= cocktail.price %>
   <%= link_to "Más Info", cocktail %>
 </div>

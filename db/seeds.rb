@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+if Cocktail.count.zero?
+  10.times do
+    c = Cocktail.create(
+      name: Faker::Coffee.blend_name,
+      category: ["cerveza", "vino", "cocktail", "espumoso"].sample,
+      price: Faker::Commerce.price,
+      recipe: Faker::Food.description,
+      ingredients: Faker::Food.ingredient
+    )
+    c.photo.attach(
+      io:  File.open(File.join(Rails.root,'app/assets/images/photo.jpg')),
+      filename: 'photo.jpg'
+    )
+  end
+end
