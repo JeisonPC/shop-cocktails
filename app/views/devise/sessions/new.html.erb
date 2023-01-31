@@ -1,20 +1,27 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
+<div class="wrapper bg-white">
+  <div class="h2 text-center">ShopTail</div>
+  <div class="h4 text-muted text-center pt-2">Enter your login details</div>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "pt-3"})  do |f| %>
+    <div class="form-group py-2">
+      <div class="input-field">
+        <span class="far fa-user p-2"></span>
+        <%= f.input :email,
                 required: false,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
+      </div>
+    </div>
+    <div class="form-group py-1 pb-2">
+      <div class="input-field"> <span class="fas fa-lock p-2"></span>
+        <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+      </div>
+    </div>
+    <div class="d-flex align-items-start">
+      <div class="remember"> <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %> <span class="checkmark"></span></div>
+      <%= f.button :submit, "Log in", input_html: { class: 'btn btn-block text-center my-3' } %>
+    </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>

@@ -1,3 +1,32 @@
+.myModal {
+  position: fixed; /* Stay in place */
+    z-index: 1;
+    top: 0;
+    box-shadow: none;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  width: 100%;
+  right: 0;
+  margin: 5rem 0;
+  position: fixed;
+  height: 92vh !important;
+  border-radius: 0 !important;
+  transition: transform 1s;
+  transform: translateX(0px);
+
+}
+
+.exit {
+  transform: translateX(100%);
+}
+
+.open {
+  transform: translateX(0);
+}
+
 @media screen and (min-width: 576px) {
   .myModal {
     /* Hidden by default */
@@ -30,17 +59,4 @@
     cursor: pointer;
   }
 
-  .close:hover,
-  .close:focus {
-    color: black;
-    cursor: pointer;
-  }
-
-  .exit {
-    transform: translateX(100%);
-  }
-
-  .open {
-    transform: translateX(0);
-  }
 }

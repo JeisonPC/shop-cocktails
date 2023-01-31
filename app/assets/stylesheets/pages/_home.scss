@@ -2,8 +2,51 @@ body {
   background-color: #FFFDED;
 }
 
+a {
+  color: black;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 1rem 0 !important;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 1rem 0 !important;
+}
+
 .products {
-  grid-column-end: span 9;
+  grid-column-end: span 12;
+}
+
+.buttons_primary {
+  background-color: #6A2C70;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border: none;
+  margin: 1rem 0;
+}
+
+.buttons_secundary {
+  border: #6A2C70 1px solid;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #212121;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.buttons_danger {
+  background-color: crimson !important;
+  width: 100%;
+  margin: 1rem 0;
 }
 
 .container-grid a {

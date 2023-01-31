@@ -3,15 +3,14 @@
     <div data-modal-target="sidebar" id="cocktail" class="card_product modal-content exit">
       <p class="close" data-action="click->modal#close">❌</p>
       <%= image_tag(@cocktail.photo, class: "cropped-photo")   %>
-      <h3><%= @cocktail.name %></h3  >
-      <%= @cocktail.category %>
+      <h2><%= @cocktail.name %></h2  >
+      <h3><%= @cocktail.category.name %></h3>
       <%= @cocktail.recipe %>
       <%= @cocktail.ingredients %>
-      <%= @cocktail.price %>
-      <div>
-        <%= link_to "Edit this cocktail", edit_cocktail_path(@cocktail) %> ✏️
-        <%= link_to "Back to cocktails", cocktails_path %>
-        <%= button_to "Destroy this cocktail", @cocktail, method: :delete %>
+      <span style="font-size: 32px; text-align:right"> <strong>$<%= @cocktail.price %></strong></span>
+      <div style="display: flex; flex-direction: column;">
+        <%= link_to content_tag(:i, "", class: "far fa-edit") + " Edit this cocktail", edit_cocktail_path(@cocktail), class: "buttons_primary"%>
+        <%= button_to "Destroy this cocktail", @cocktail, method: :delete, class: "buttons_primary buttons_danger" %>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <div id="<%= dom_id cocktail %>" class="card_product">
   <%= image_tag(cocktail.photo, class: "cropped-photo")   %>
-  <h3><%= cocktail.name %></h3  >
-  <%= cocktail.category.name %>
-  <%= cocktail.price %>
+  <h3><%= cocktail.name %></h3>
+  <h4><%= cocktail.category.name %></h4>
+  <span style="font-size: 32px; text-align:center"> <strong>$<%= cocktail.price %></strong></span>
   <%= link_to "Más Info", cocktail, data: { turbo_frame: "modal" } %>
 </div>
