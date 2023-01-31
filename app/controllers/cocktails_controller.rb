@@ -22,7 +22,9 @@ class CocktailsController < ApplicationController
 
   # POST /cocktails
   def create
+    @category = Category.find_or_create_by(name: params[:cocktail][:category])
     @cocktail = Cocktail.new(cocktail_params)
+    @cocktail.category = @category
 
     if @cocktail.save
       redirect_to @cocktail, notice: "Cocktail was successfully created."
