@@ -1,14 +1,16 @@
 <h1>New cocktail</h1>
-<%= simple_form_for @cocktail, html: { "data-controller" => "formatter" } do |f| %>
-  <%= f.input :name %>
-  <%= f.input :ingredients %>
-  <%= f.input :recipe %>
-  <%= f.association :category, collection: [ "Cerveza", "Vino", "espumantes", "cocktail"]%>
-  <%= f.input :price, as: :string, input_html: { "data-formatter-target" => "price" }  %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
-<br>
-<div>
-  <%= link_to "Back to cocktails", cocktails_path %>
+<div class="container-grid">
+  <%= simple_form_for @cocktail, html: { "data-controller" => "formatter" } do |f| %>
+    <%= f.input :name %>
+    <%= f.input :ingredients %>
+    <%= f.input :recipe %>
+    <%= f.association :category, collection: [ "Cerveza", "Vino", "espumantes", "cocktail"]%>
+    <%= f.input :price, as: :string, input_html: { "data-formatter-target" => "price" }  %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+  <br>
+  <div>
+    <%= link_to "Back to cocktails", cocktails_path %>
+  </div>
 </div>
