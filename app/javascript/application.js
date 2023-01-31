@@ -2,7 +2,6 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "@popperjs/core"
-import "price_formatter"
 
 
 import "bootstrap"

@@ -7,7 +7,5 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-const application = Application.start()
-
-import PriceController from "./price_controller"
-application.register("price", PriceController)
+import ModalController from "./modal_controller"
+application.register("modal", ModalController)

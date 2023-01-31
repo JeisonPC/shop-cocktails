@@ -1,18 +1,18 @@
-<p style="color: green"><%= notice %></p>
-
-<div id="cocktail" class="card_product">
-  <%= image_tag(@cocktail.photo, class: "cropped-photo")   %>
-  <h3><%= @cocktail.name %></h3  >
-  <%= @cocktail.category %>
-  <%= @cocktail.recipe %>
-  <%= @cocktail.ingredients %>
-  <%= @cocktail.price %>
-</div>
-
-
-<div>
-  <%= link_to "Edit this cocktail", edit_cocktail_path(@cocktail) %> |
-  <%= link_to "Back to cocktails", cocktails_path %>
-
-  <%= button_to "Destroy this cocktail", @cocktail, method: :delete %>
-</div>
+<%= turbo_frame_tag "modal" do %>
+  <div data-controller="modal" id="myModal" class="myModal">
+    <div data-modal-target="sidebar" id="cocktail" class="card_product modal-content exit">
+      <p class="close" data-action="click->modal#close">❌</p>
+      <%= image_tag(@cocktail.photo, class: "cropped-photo")   %>
+      <h3><%= @cocktail.name %></h3  >
+      <%= @cocktail.category %>
+      <%= @cocktail.recipe %>
+      <%= @cocktail.ingredients %>
+      <%= @cocktail.price %>
+      <div>
+        <%= link_to "Edit this cocktail", edit_cocktail_path(@cocktail) %> ✏️
+        <%= link_to "Back to cocktails", cocktails_path %>
+        <%= button_to "Destroy this cocktail", @cocktail, method: :delete %>
+      </div>
+    </div>
+  </div>
+<% end %>

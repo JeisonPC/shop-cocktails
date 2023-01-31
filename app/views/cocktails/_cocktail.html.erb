@@ -3,5 +3,5 @@
   <h3><%= cocktail.name %></h3  >
   <%= cocktail.category.name %>
   <%= cocktail.price %>
-  <%= link_to "Más Info", cocktail %>
+  <%= link_to "Más Info", cocktail, data: { turbo_frame: "modal" } %>
 </div>
